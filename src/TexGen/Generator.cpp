@@ -15,11 +15,11 @@
 
 void AddBlendFunc( Texture* inSource, Texture* inDestination )
 {
-	for( int y = 0; y < inDestination->Height; ++y )
+	for( unsigned int y = 0; y < inDestination->Height; ++y )
     {
-        for( int x = 0; x < inDestination->Width; ++x )
+        for( unsigned int x = 0; x < inDestination->Width; ++x )
         {
-            for( int i = 0; i < inDestination->PixelDepth; ++i )
+            for( unsigned int i = 0; i < inDestination->PixelDepth; ++i )
             {
                 int index = ( (y*inDestination->Width+x)*inDestination->PixelDepth ) + i;
 				float src = inSource->PixelData[index] / 255.0f;
@@ -34,11 +34,11 @@ void AddBlendFunc( Texture* inSource, Texture* inDestination )
 
 void MultiplyBlendFunc( Texture* inSource, Texture* inDestination )
 {
-	for( int y = 0; y < inDestination->Height; ++y )
+	for( unsigned int y = 0; y < inDestination->Height; ++y )
     {
-        for( int x = 0; x < inDestination->Width; ++x )
+        for( unsigned int x = 0; x < inDestination->Width; ++x )
         {
-            for( int i = 0; i < inDestination->PixelDepth; ++i )
+            for( unsigned int i = 0; i < inDestination->PixelDepth; ++i )
             {
                 int index = ( (y*inDestination->Width+x)*inDestination->PixelDepth ) + i;
 
@@ -76,7 +76,7 @@ void Generator::Initialize( Node* inProgramNode )
 	RadialGradient* radGradOp = new RadialGradient();
     RegisterOperation( "RadialGradient", radGradOp );
 
-	HorizontalGradient*  horizGradOp = new HorizontalGradient();
+	HorizontalGradient* horizGradOp = new HorizontalGradient();
     RegisterOperation( "HorizontalGradient", horizGradOp );
 
 	VerticalGradient*  vertGradOp = new VerticalGradient();
