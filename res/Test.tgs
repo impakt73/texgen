@@ -1,0 +1,6 @@
+Texture Sprite 512 512 3
+{
+	Clear 1.0 0.0 0.0 1.0;
+	Noise;
+	RadialGradient 0.25 0.75 0.0 0.0 0.0 1.0 1.0 1.0 1.0 1.0;
+}
