@@ -5,7 +5,7 @@
 class ClearOperation : public Operation
 {
 public:
-    ClearOperation( void ) {}
+    ClearOperation( void ) : Operation( kOperationType_Clear ) {}
     ~ClearOperation( void ) {}
 
     void Run( Texture* ioTexture, const std::vector<float> inArguments );

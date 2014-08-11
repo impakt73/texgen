@@ -27,8 +27,8 @@ public:
     virtual std::string GetDescription( void ) const { return "Root Node"; }
 
 protected:
-    Node(const Node& other) = delete;
-    Node& operator=(const Node& other) = delete;
+    Node(const Node& other);
+    Node& operator=(const Node& other);
 
     eNodeType mType;
 

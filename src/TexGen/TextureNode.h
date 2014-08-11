@@ -23,8 +23,8 @@ public:
     std::string GetDescription( void ) const { return "Texture Node: " + mTextureName; }
 
 private:
-    TextureNode(const TextureNode& other) = delete;
-    TextureNode& operator=(const TextureNode& other) = delete;
+    TextureNode(const TextureNode& other);
+    TextureNode& operator=(const TextureNode& other);
 
     std::string mTextureName;
     unsigned int mWidth;

@@ -7,6 +7,13 @@
 #include <string>
 #include <cassert>
 
+enum eBlendMode
+{
+	kBlendMode_Undefined = 0,
+	kBlendMode_Add,
+	kBlendMode_Multiply
+};
+
 class Generator
 {
 public:
@@ -28,4 +35,6 @@ private:
    std::map<std::string, Texture*> mTextures;
    std::map<std::string, Operation*> mOperations;
    Node* mProgramNode;
+
+   eBlendMode mBlendMode;
 };

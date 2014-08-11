@@ -2,6 +2,7 @@
 
 #include <vector>
 #include <TexGen/Texture.h>
+#include <TexGen/Operations/OperationType.h>
 
 class Operation
 {
@@ -10,8 +11,12 @@ public:
 
     virtual void Run( Texture* ioTexture, const std::vector<float> inArguments ) = 0;
 
+	inline eOperationType GetType( void ) const { return mType; }
+
 protected:
-    Operation(void) {}
-    Operation(const Operation& other) = delete;
-    Operation& operator=(const Operation& other) = delete;
+	Operation(eOperationType inType) : mType( inType ) {}
+    Operation(const Operation& other);
+    Operation& operator=(const Operation& other);
+
+	eOperationType mType;
 };

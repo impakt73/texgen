@@ -13,6 +13,6 @@ private:
     Parser(void) {}
     ~Parser(void) {}
 
-    Parser(const Parser& other) = delete;
-    Parser& operator=(const Parser& other) = delete;
+    Parser(const Parser& other);
+    Parser& operator=(const Parser& other);
 };

@@ -16,8 +16,8 @@ public:
     std::string GetDescription( void ) const { return "Operation Node: " + mOperationName + " " + std::to_string( mArguments.size() ) + " Arguments"; }
 
 private:
-    OperationNode(const OperationNode& other) = delete;
-    OperationNode& operator=(const OperationNode& other) = delete;
+    OperationNode(const OperationNode& other);
+    OperationNode& operator=(const OperationNode& other);
 
     std::string mOperationName;
     std::vector<float> mArguments;

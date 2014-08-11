@@ -2,11 +2,11 @@
 
 #include <TexGen/Operations/Operation.h>
 
-class NoiseOperation : public Operation
+class MultiplyBlend : public Operation
 {
 public:
-    NoiseOperation( void ) : Operation( kOperationType_Noise )  {}
-    ~NoiseOperation( void ) {}
+    MultiplyBlend( void ) : Operation( kOperationType_MultiplyBlend )  {}
+    ~MultiplyBlend( void ) {}
 
     void Run( Texture* ioTexture, const std::vector<float> inArguments );
 };

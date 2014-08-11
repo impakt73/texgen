@@ -1,6 +1,53 @@
-Texture Sprite 512 512 3
+
+Texture Sprite 1024 1024 3
 {
+	MultiplyBlend;
 	Clear 1.0 0.0 0.0 1.0;
 	Noise;
-	RadialGradient 0.25 0.75 0.0 0.0 0.0 1.0 1.0 1.0 1.0 1.0;
+	AddBlend;
+	RadialGradient 0.0 1.0 0.0 0.0 0.0 1.0 1.0 1.0 1.0 1.0;
+	MultiplyBlend;
+	RadialGradient 0.0 1.0 0.0 0.0 0.0 1.0 1.0 1.0 1.0 1.0;
+}
+
+Texture Sprite2 1024 1024 4
+{
+	MultiplyBlend;
+	Clear 1.0 1.0 0.0 1.0;
+	RadialGradient 1.0 0.0 1.0 1.0 1.0 1.0 0.0 0.0 0.0 1.0;
+	AddBlend;
+	RadialGradient 0.85 0.0 1.0 1.0 1.0 1.0 0.25 0.25 0.25 1.0;
+}
+
+Texture Sprite3 1024 1024 3
+{
+	MultiplyBlend;
+	Clear 0.0 0.0 0.0 0.0;
+	AddBlend;
+	Noise;
+	MultiplyBlend;
+	Clear 0.0 0.0 1.0 1.0;
+	RadialGradient 0.0 1.0 0.0 0.0 0.0 1.0 1.0 1.0 1.0 1.0;
+	MultiplyBlend;
+	RadialGradient 0.0 1.0 0.0 0.0 0.0 1.0 1.0 1.0 1.0 1.0;
+}
+
+Texture Sky 1024 1024 3
+{
+	MultiplyBlend;
+	Clear 0.0 0.0 0.0 0.0;
+	AddBlend;
+	Clear 0.52 0.80 0.92 1.0;
+	MultiplyBlend;
+	VerticalGradient 0.0 1.0 0.0 0.0 0.0 1.0 1.0 1.0 1.0 1.0;
+}
+
+Texture Dirt 1024 1024 3
+{
+	MultiplyBlend;
+	Clear 0.0 0.0 0.0 0.0;
+	AddBlend;
+	Clear 0.54 0.27 0.07 1.0;
+	MultiplyBlend;
+	HorizontalGradient 0.0 1.0 0.5 0.5 0.5 1.0 1.0 1.0 1.0 1.0;
 }

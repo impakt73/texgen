@@ -46,7 +46,7 @@ ENDFUNCTION( ADD_SOURCE )
 #->Main
 ADD_SOURCE( MAIN_SRC "src" "" SRC_FILES Main.cpp )
 ADD_SOURCE( TEXGEN_SRC "src/TexGen" "TexGen" SRC_FILES stb_image_write.h stb_image_write.cpp OperationNode.h Texture.h TextureNode.h Node.h NodeType.h Parser.h Parser.cpp File.h TokenData.h NumberTokenData.h IdentifierTokenData.h Lexer.h Lexer.cpp Token.h File.cpp Generator.h Generator.cpp Scanner.h Scanner.cpp )
-ADD_SOURCE( TEXGEN_SRC "src/TexGen/Operations" "TexGen\\Operations" SRC_FILES Operation.h ClearOperation.h ClearOperation.cpp NoiseOperation.h NoiseOperation.cpp )
+ADD_SOURCE( TEXGEN_SRC "src/TexGen/Operations" "TexGen\\Operations" SRC_FILES VerticalGradient.h VerticalGradient.cpp HorizontalGradient.h HorizontalGradient.cpp OperationType.h MultiplyBlend.h MultiplyBlend.cpp AddBlend.h AddBlend.cpp Operation.h RadialGradient.h RadialGradient.cpp ClearOperation.h ClearOperation.cpp NoiseOperation.h NoiseOperation.cpp )
 
 ADD_EXECUTABLE( "${PROJECT_NAME}" WIN32 ${SRC_FILES} )
 

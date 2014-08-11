@@ -13,6 +13,6 @@ private:
     Lexer(void) {}
     ~Lexer(void) {}
 
-    Lexer(const Lexer& other) = delete;
-    Lexer& operator=(const Lexer& other) = delete;
+    Lexer(const Lexer& other);
+    Lexer& operator=(const Lexer& other);
 };
